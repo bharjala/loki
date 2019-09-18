@@ -50,7 +50,7 @@ $ helm upgrade --install promtail loki/promtail --set "loki.serviceName=loki"
 
 ## Deploy Grafana to your cluster
 
-To install Grafana on your cluster with helm, use the following command:
+To install Grafana on your cluster with Helm, use the following command:
 
 ```bash
 $ helm install stable/grafana -n loki-grafana
@@ -85,7 +85,7 @@ loki:
   password: pass
 ```
 
-Sample helm template for ingress:
+Sample Helm template for ingress:
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -119,9 +119,9 @@ $ helm upgrade --install loki ./loki-stack-*.tgz
 ```
 
 After verifying your changes, you need to bump the chart version following [semantic versioning](https://semver.org) rules.
-For example, if you update the loki chart, you need to bump the versions as follows:
+For example, if you update the Loki chart, you need to bump the versions as follows:
 
 - Update version loki/Chart.yaml
 - Update version loki-stack/Chart.yaml
 
-You can use the `make helm-debug` to test and print out all chart templates. If you want to install helm (tiller) in your cluster use `make helm-install`, to install the current build in your Kubernetes cluster run `make helm-upgrade`.
+You can use the `make helm-debug` to test and print out all chart templates. If you want to install Helm (tiller) in your cluster use `make helm-install` to install the current build in your Kubernetes cluster run `make helm-upgrade`.
